@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_6"
+    android:layout_marginHorizontal="@dimen/margin_6"
+    android:layout_marginBottom="@dimen/margin_4"
+    android:background="@drawable/bg_btn_google_fb"
+    >
+
+    <TextView
+        android:id="@+id/dpsNo"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:gravity="center"
+        android:text="DPS No 96"
+        android:textColor="#90000000"
+        />
+
+    <TextView
+        android:id="@+id/dpsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_6"
+        android:layout_toRightOf="@+id/dpsNo"
+        android:text="Organism and Populations"
+        android:textColor="@color/text_color_create_account"
+        />
+
+
+    <TextView
+        android:id="@+id/dateDps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dpsText"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_6"
+        android:layout_toRightOf="@+id/dpsNo"
+        android:text="2/22/2022"
+        android:textSize="@dimen/size_12" />
+
+    <TextView
+        android:id="@+id/textUploaded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dpsText"
+        android:layout_marginHorizontal="@dimen/margin_2"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/dateDps"
+        android:background="@drawable/bg_test_result_layout"
+        android:paddingHorizontal="@dimen/margin_6"
+        android:paddingVertical="@dimen/margin_2"
+        android:text="Uploaded today"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_12" />
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/textUploaded"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/text_color" />
+
+
+
+
+</RelativeLayout>

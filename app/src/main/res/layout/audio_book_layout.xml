@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_6"
+    android:layout_marginHorizontal="@dimen/margin_6"
+    android:layout_marginBottom="@dimen/margin_4"
+    android:background="@drawable/bg_btn_google_fb"
+    >
+
+    <ImageView
+        android:id="@+id/downloaddNoteIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_8"
+        android:src="@drawable/audio_books"
+        android:gravity="center"
+        android:textSize="@dimen/size18"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_note_circle"
+        />
+
+    <TextView
+        android:id="@+id/audioTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_6"
+        android:layout_toLeftOf="@+id/downloadIcon"
+        android:layout_toRightOf="@+id/downloaddNoteIcon"
+        android:text="Environmental issues chapter"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:id="@+id/audioDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/audioTitle"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_toRightOf="@+id/downloaddNoteIcon"
+        android:text="2/2/2022"
+        android:textSize="@dimen/size_12" />
+
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/audioDate"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_toRightOf="@+id/downloaddNoteIcon"
+        android:text="Size: 104.4 MB"
+        android:textSize="@dimen/size_12" />
+
+
+    <TextView
+        android:id="@+id/audioDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/audioDate"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_toRightOf="@+id/size"
+        android:text="Duration: 00:55:43"
+        android:textSize="@dimen/size_12" />
+
+
+
+    <ImageView
+        android:id="@+id/downloadIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_8"
+        android:src="@drawable/download" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_color"
+        android:layout_below="@id/size"
+        android:layout_marginTop="@dimen/margin_10"
+        />
+
+
+
+
+</RelativeLayout>

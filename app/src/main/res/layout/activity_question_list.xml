@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.QuestionListActivity">
+
+    <TextView
+        android:id="@+id/questionList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:padding="@dimen/margin_8"
+        android:text="Question List"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size18" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_baseline_close_24"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/margin_18"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/layoutStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingHorizontal="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        android:layout_below="@id/questionList"
+        >
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_6"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/umarked_circle_question"
+                android:layout_gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unmarked"
+                android:layout_marginHorizontal="@dimen/margin_6"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_6"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/bg_note_circle"
+                android:layout_gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct"
+                android:layout_marginHorizontal="@dimen/margin_6"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_6"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/incorrect_question"
+                android:layout_gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incorrect"
+                android:layout_marginHorizontal="@dimen/margin_6"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvQuestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_16"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        android:layout_below="@+id/layoutStatus"
+
+        />
+
+
+
+    <LinearLayout
+        android:paddingVertical="@dimen/margin_4"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_4"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_4"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/downloadBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginBottom="@dimen/margin_4"
+            android:layout_weight="1"
+            android:background="@drawable/bg_logout_btn"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/margin_6"
+            android:paddingVertical="@dimen/margin_12"
+            android:text="Download"
+            android:textColor="@color/white" />
+
+
+        <TextView
+            android:id="@+id/finishBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginBottom="@dimen/margin_4"
+            android:layout_weight="1"
+            android:background="@drawable/bg_start_test"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/margin_6"
+            android:paddingVertical="@dimen/margin_12"
+            android:text="Finish"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_6"
+    android:layout_marginHorizontal="@dimen/margin_6"
+    android:layout_marginBottom="@dimen/margin_4"
+    android:background="@drawable/bg_btn_google_fb"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginLeft="@dimen/size_12"
+        android:id="@+id/bestUserImage"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/avator" />
+
+    <TextView
+        android:id="@+id/bestUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_6"
+        android:layout_toRightOf="@+id/bestUserImage"
+        android:text="User Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_12" />
+
+
+    <TextView
+        android:id="@+id/bestCombineScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bestUserName"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_toRightOf="@+id/bestUserImage"
+        android:text="Combine Score : 2435"
+        android:textSize="@dimen/size_12" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bestPosition"
+        android:text="1st"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginHorizontal="@dimen/size_12"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_color"
+        android:layout_below="@id/bestCombineScore"
+        android:layout_marginTop="@dimen/margin_10"
+        />
+
+
+
+
+</RelativeLayout>

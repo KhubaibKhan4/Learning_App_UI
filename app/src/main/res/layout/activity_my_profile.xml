@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayoutMyProfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activity.MyProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/margin_16"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/layoutProfileTop"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/header_bg">
+
+                <include
+                    android:id="@+id/headerLayout"
+                    layout="@layout/header_layout" />
+
+                <TextView
+                    android:id="@+id/textMyProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headerLayout"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/margin_12"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:gravity="center_horizontal"
+                    android:text="My Profile"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size18"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/editProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headerLayout"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/bg_test_result_layout"
+                    android:backgroundTint="@color/white"
+                    android:onClick="editProfileClick"
+                    android:paddingHorizontal="@dimen/margin_8"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:text="Edit Profile"
+                    android:textColor="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/idCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headerLayout"
+                    android:layout_marginHorizontal="@dimen/margin_4"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_toLeftOf="@+id/editProfile"
+                    android:background="@drawable/bg_test_result_layout"
+                    android:backgroundTint="@color/white"
+                    android:paddingHorizontal="@dimen/margin_8"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:text="ID Card"
+                    android:textColor="@color/text_color" />
+
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/userDetailCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_12"
+                android:layout_marginTop="-60dp"
+                app:cardElevation="@dimen/margin_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <RelativeLayout
+                            android:id="@+id/userNameLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:background="@drawable/profile_bg">
+
+
+                            <TextView
+                                android:id="@+id/textUserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/margin_18"
+                                android:layout_marginBottom="@dimen/margin_6"
+                                android:gravity="center_horizontal"
+                                android:text="@string/shital_pandurang_chavan"
+                                android:textColor="@color/white" />
+
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/userGmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/userNameLayout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_2"
+                            android:layout_marginBottom="@dimen/margin_6"
+                            android:text="@string/rathodgs708_gmail_com"
+                            android:textColor="@color/text_color_create_account" />
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/margin_12"
+                            android:src="@drawable/avator" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/userNameText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_12"
+                            android:layout_marginTop="@dimen/margin_18"
+                            android:layout_marginBottom="@dimen/margin_12"
+                            android:gravity="center"
+                            android:text="@string/shital_pandurang_chavan"
+                            android:textColor="@color/side_menu_text_color"
+                            android:textSize="@dimen/size_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textDigit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/userNameLayout"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_12"
+                            android:layout_marginBottom="@dimen/margin_6"
+                            android:text=",19"
+                            android:textColor="@color/text_color_create_account"
+                            android:textSize="@dimen/size_16" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingRight="@dimen/margin_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_18"
+                        android:layout_weight="3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textTarget"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/headerLayout"
+                                android:layout_marginTop="@dimen/margin_16"
+                                android:gravity="center_horizontal"
+                                android:text="Target"
+                                android:textColor="@color/black" />
+
+
+                            <TextView
+                                android:id="@+id/batchText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/userNameLayout"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/margin_2"
+                                android:layout_marginBottom="@dimen/margin_6"
+                                android:text="Batch"
+                                android:textColor="@color/text_color_create_account" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/headerLayout"
+                                android:layout_marginTop="@dimen/margin_16"
+                                android:gravity="center_horizontal"
+                                android:text="Regular"
+                                android:textColor="@color/black" />
+
+
+                            <TextView
+                                android:id="@+id/textSubsrciption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/userNameLayout"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/margin_2"
+                                android:layout_marginBottom="@dimen/margin_6"
+                                android:text="Subscription"
+                                android:textColor="@color/text_color_create_account" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/headerLayout"
+                                android:layout_marginTop="@dimen/margin_16"
+                                android:gravity="center_horizontal"
+                                android:text="May 31, 2022"
+                                android:textColor="@color/black" />
+
+
+                            <TextView
+                                android:id="@+id/textExpiresOn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/userNameLayout"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/margin_2"
+                                android:layout_marginBottom="@dimen/margin_6"
+                                android:text="Expires On"
+                                android:textColor="@color/text_color_create_account" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardUserInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_12"
+                android:layout_marginTop="@dimen/margin_24"
+                app:cardElevation="@dimen/margin_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textUserInformartino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headerLayout"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:gravity="center_horizontal"
+                        android:text="User Information"
+                        android:textColor="@color/side_menu_text_color" />
+
+
+                    <TextView
+                        android:id="@+id/textFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userNameLayout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Full Name"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/fullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userNameLayout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_person_16"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="@string/shital_pandurang_chavan"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                    <TextView
+                        android:id="@+id/textUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Username"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="@string/shital_pandurang_chavan"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                    <TextView
+                        android:id="@+id/textEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Email"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_email_16"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="@string/rathodgs708_gmail_com"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                    <TextView
+                        android:id="@+id/textDateOfBirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Date Of Birth"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/dateOfBirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="July 21, 2022"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                    <TextView
+                        android:id="@+id/textGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Gender"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_person_16"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="Female"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                    <TextView
+                        android:id="@+id/textContactInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headerLayout"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:gravity="center_horizontal"
+                        android:text="Contact Information"
+                        android:textColor="@color/side_menu_text_color" />
+
+
+                    <TextView
+                        android:id="@+id/textAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Address"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:text="At, sadashiv peth nagaar, near alka talkies"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                    <TextView
+                        android:id="@+id/contactNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Contact Number"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/contactNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_phone_24"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="8693859453"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/textCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Country"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_flag_24"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="India"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                    <TextView
+                        android:id="@+id/textGuardianName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Guardian's Name"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/guardianName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_person_16"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="Rathod Sir"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/textGuardianContactNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Gender"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/guardianContactNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_phone_24"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="3453465645634"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                    <TextView
+                        android:id="@+id/textEducationDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headerLayout"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:gravity="center_horizontal"
+                        android:text="Education Details"
+                        android:textColor="@color/side_menu_text_color" />
+
+
+                    <TextView
+                        android:id="@+id/textExamBatch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Exam Batch"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/examBatch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_person_16"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="Target"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/textInstituteType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Institute Type"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/instituteType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:drawableLeft="@drawable/ic_baseline_account_balance_24"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="College"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                    <TextView
+                        android:id="@+id/textInstitueName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Institute Name"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/instituteName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="@dimen/size_16"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:drawableLeft="@drawable/ic_baseline_account_balance_24"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:gravity="center"
+                        android:text="Self College"
+                        android:textColor="@color/text_color_create_account"
+                        android:textSize="@dimen/size_12" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                app:cardElevation="@dimen/margin_6">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_16"
+                    >
+
+                    <TextView
+                        android:id="@+id/textReferalCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="Share Referral Code"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/size_12" />
+
+
+
+                    <TextView
+                        android:id="@+id/textCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textReferalCode"
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_6"
+                        android:gravity="center_horizontal"
+                        android:text="qofRWr22f"
+                        android:textColor="@color/side_menu_text_color" />
+
+
+                    <ImageView
+                        android:id="@+id/themSwitch"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginHorizontal="@dimen/size_12"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_baseline_share_24"
+                        android:layout_marginTop="@dimen/margin_16"
+                        />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/llLeftDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:layout_marginEnd="-40dp"
+        android:layout_marginRight="-40dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_sidebar" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llProfileDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:layout_marginLeft="-45dp"
+        android:layout_marginStart="-45dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/profile_menu" />
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

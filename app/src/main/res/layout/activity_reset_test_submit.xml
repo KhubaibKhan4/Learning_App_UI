@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activity.ResetTestSubmitActivity">
+
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_above="@+id/textReset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_32"
+        android:background="@drawable/bg_note_circle"
+        android:src="@drawable/ic_baseline_check_24"
+        android:padding="@dimen/margin_8"
+        android:backgroundTint="#00D34F" />
+
+    <TextView
+        android:id="@+id/textReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Your Request for test reset has been generated. Kindly wait upto 30 minutes, Our Support team is working on your issue. Kindly close the app now and wait for an email or sms from biomentors support team."
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="@dimen/size_16"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_below="@+id/textReset"
+        android:id="@+id/startTestBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/margin_16"
+        android:background="@drawable/bg_register_btn"
+        android:paddingHorizontal="@dimen/margin_16"
+        android:text="Home"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>

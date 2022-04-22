@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_btn_google_fb"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/resulTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_12"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="8. Cell- The Unit of Life"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/scoreResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/audioTitle"
+                android:layout_marginHorizontal="@dimen/size_12"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_toRightOf="@+id/downloaddNoteIcon"
+                android:text="Score: -8.00/120"
+                android:textSize="@dimen/size_12" />
+
+
+            <TextView
+                android:id="@+id/percentageResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/audioTitle"
+                android:layout_marginHorizontal="@dimen/size_12"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_toRightOf="@+id/downloaddNoteIcon"
+                android:text="Percentage: 0.0%0"
+                android:textSize="@dimen/size_12" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/margin_4"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/requestReset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/testTitle"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:layout_toRightOf="@+id/testThumbnail"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_logout_btn"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_6"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:text="Request Reset"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/review"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/testTitle"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_6"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:layout_toRightOf="@+id/testThumbnail"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_test_result_layout"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_6"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:text="Review"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/testAnalysis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/testTitle"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:layout_toRightOf="@+id/testThumbnail"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_start_test"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_6"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:text="Test Analysis"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_4"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/size_16"
+                android:layout_marginTop="@dimen/size_16"
+                android:gravity="center"
+                android:text="Result of 4. Animal kingdom will be declared after test is over.Due to reason, if you want your test to reset click on any of the button given below."
+                android:textColor="@color/black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/margin_4"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/resetTestBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/testTitle"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:layout_toRightOf="@+id/testThumbnail"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_logout_btn"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_12"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:text="Request Reset"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/contactUs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/testTitle"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:layout_toRightOf="@+id/testThumbnail"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_start_test"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_12"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:text="Contact Support"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_4"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/size_16"
+                android:layout_marginTop="@dimen/size_16"
+                android:gravity="center"
+                android:text="Result of 1. The living world will be declared after test is over. Due to any reson, if you want to reset your test click on below button."
+                android:textColor="@color/black"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/margin_4"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/resetTestBtn2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/testTitle"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:layout_toRightOf="@+id/testThumbnail"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_logout_btn"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_12"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:text="Request Reset"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/contactUs2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/testTitle"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:layout_toRightOf="@+id/testThumbnail"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_start_test"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_12"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:text="Contact Support"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

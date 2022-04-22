@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_4"
+    app:cardElevation="@dimen/margin_8"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:paddingVertical="@dimen/margin_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_register_btn"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/margin_4"
+            android:layout_marginTop="@dimen/margin_8"
+            android:gravity="center_horizontal"
+            android:text="Day 1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dayImage"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_4"
+            android:layout_marginTop="@dimen/margin_10"
+            android:src="@drawable/avator" />
+
+        <ProgressBar
+            android:id="@+id/pbProcessing"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tvProcessing"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginHorizontal="@dimen/margin_6"
+            android:max="100"
+            android:progress="80" />
+
+
+        <TextView
+            android:id="@+id/dateInLayoutTrainingSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:gravity="center_horizontal"
+            android:text="Wed, Jun 02"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_14"
+            android:layout_marginHorizontal="@dimen/margin_4"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

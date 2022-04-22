@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/statusIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/bg_note_circle"
+        android:backgroundTint="#8DF7B2"
+        android:padding="@dimen/margin_6"
+        android:src="@drawable/ic_baseline_check_24" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="280dp"
+        android:layout_below="@id/statusIcon"
+        android:layout_marginLeft="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_4"
+        android:background="@drawable/vertical_dot_line" />
+
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8:00 AM"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_toRightOf="@+id/statusIcon"
+        android:layout_marginLeft="@dimen/margin_12"
+        />
+
+    <TextView
+        android:id="@+id/textSolveDps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/bg_register_btn"
+        android:drawableLeft="@drawable/ic_baseline_edit_24"
+        android:drawablePadding="@dimen/margin_6"
+        android:paddingHorizontal="@dimen/margin_8"
+        android:paddingVertical="@dimen/margin_6"
+        android:text="Solve Dps"
+        android:textColor="@color/white" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textSolveDps"
+        android:layout_toRightOf="@+id/statusIcon"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        app:cardCornerRadius="@dimen/margin_8"
+        android:elevation="@dimen/margin_6"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layoutVideo"
+            >
+
+            <ImageView
+                android:id="@+id/imageLecture"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lecture 1"
+                android:id="@+id/lectureNo"
+                android:textColor="@color/black"
+                android:padding="@dimen/margin_4"
+                android:layout_margin="@dimen/margin_6"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Biology Basic"
+                android:id="@+id/lectureTitle"
+                android:textColor="@color/black"
+                android:padding="@dimen/margin_4"
+                android:layout_marginHorizontal="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_4"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</RelativeLayout>

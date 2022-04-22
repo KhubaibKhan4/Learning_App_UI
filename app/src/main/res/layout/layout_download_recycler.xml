@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_6"
+    android:layout_marginBottom="@dimen/margin_4"
+    android:background="@drawable/bg_btn_google_fb"
+    android:paddingVertical="@dimen/margin_6">
+
+    <TextView
+        android:id="@+id/downloaddNoteIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:background="@drawable/bg_note_circle"
+        android:gravity="center"
+        android:text="N"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size18" />
+
+    <TextView
+        android:id="@+id/notTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_6"
+        android:layout_toLeftOf="@+id/downloadIcon"
+        android:layout_toRightOf="@+id/downloaddNoteIcon"
+        android:text="Lecture 2 - Notes Locomotion and Movement"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:id="@+id/noteDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notTitle"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_toRightOf="@+id/downloaddNoteIcon"
+        android:text="2/2/2022"
+        android:textSize="@dimen/size_12" />
+
+
+    <TextView
+        android:id="@+id/textUploaded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notTitle"
+        android:layout_marginHorizontal="@dimen/margin_2"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_toRightOf="@+id/noteDate"
+        android:background="@drawable/bg_test_result_layout"
+        android:paddingHorizontal="@dimen/margin_6"
+        android:paddingVertical="@dimen/margin_2"
+        android:text="Uploaded today"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_12"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/downloadIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_8"
+        android:src="@drawable/download" />
+
+
+    <TextView
+        android:id="@+id/textOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_12"
+        android:background="@drawable/bg_register_btn"
+        android:paddingHorizontal="@dimen/margin_16"
+        android:paddingVertical="@dimen/margin_4"
+        android:text="Open"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/noteDate"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/text_color" />
+
+
+</RelativeLayout>

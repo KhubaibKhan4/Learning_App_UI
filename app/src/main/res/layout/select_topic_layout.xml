@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="fitXY"
+        android:id="@+id/topicImage"
+        app:riv_corner_radius="@dimen/margin_6"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin_8"
+        />
+
+
+    <TextView
+        android:id="@+id/topicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_toRightOf="@+id/topicImage"
+        android:text="16. Digestion and Absorption"
+        android:textSize="@dimen/size_16"
+        android:layout_marginHorizontal="@dimen/margin_6"
+        />
+
+
+
+</RelativeLayout>

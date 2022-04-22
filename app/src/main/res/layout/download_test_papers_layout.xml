@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_6"
+    android:layout_marginHorizontal="@dimen/margin_6"
+    android:layout_marginBottom="@dimen/margin_4"
+    android:background="@drawable/bg_btn_google_fb"
+    >
+
+    <TextView
+        android:id="@+id/downloaddNoteIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:gravity="center"
+        android:text="NEET"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/pcbTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_6"
+        android:layout_toLeftOf="@+id/downloadIcon"
+        android:layout_toRightOf="@+id/downloaddNoteIcon"
+        android:text="PCB Test 29"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/maxMarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pcbTest"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/downloaddNoteIcon"
+        android:text="Max.Marks: 720"
+        android:textSize="@dimen/size_12" />
+
+    <TextView
+        android:id="@+id/maxTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/maxMarks"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/downloaddNoteIcon"
+        android:text="Max.Time: 180"
+        android:textSize="@dimen/size_12" />
+
+
+    <TextView
+        android:id="@+id/textTopper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/downloadIcon"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_4"
+        android:background="@drawable/bg_register_btn"
+        android:paddingHorizontal="@dimen/margin_6"
+        android:paddingVertical="@dimen/margin_4"
+        android:text="Toppers"
+        android:textColor="@color/white"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/downloadIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_4"
+        android:src="@drawable/download" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/textTopper"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/text_color" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:id="@+id/accountAndTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            android:text="My Account"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_16" />
+
+        <TextView
+            android:id="@+id/textNightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            android:layout_toLeftOf="@+id/themSwitch"
+            android:text="Night Mode"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_16" />
+
+        <Switch
+            android:id="@+id/themSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/themSwitch"
+            android:layout_marginTop="@dimen/margin_4"
+            android:background="@color/text_color" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/accountAndTheme"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/myProfileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_2"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/user_avator" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="My Profile"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_14"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/changePasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/login_lock" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="Change Password"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_14"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/preferencesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/setting" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="Preferences"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_16"
+                      />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rewardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/medal" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="My Rewards"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_14"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/myTransctionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/rs" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="My Transactions"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_14"
+                      />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/myAttendenceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/attendacne" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="My Attendance"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_14"
+                      />
+
+                <TextView
+                    android:id="@+id/textPrime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|right"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:layout_toLeftOf="@+id/iconDropDown"
+                    android:background="@drawable/bg_test_result_layout"
+                    android:gravity="right"
+                    android:padding="@dimen/margin_6"
+                    android:text="Prime"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/counsellorAppointemntLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/carrior" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="Counsellor Appointment"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_14"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/myBookmarkedVideosLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/star" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="My Bookmarked Videos"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_14"
+                     />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/myBookmarkedQuestionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/book_mark" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="My Bookmarked Questions"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_14"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/myDownloadsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/lock" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="My Downloads"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_14"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/myDisuccsionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_4">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:src="@drawable/mulity" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:text="My Discussion Threads"
+                    android:textColor="@color/side_menu_text_color"
+                    android:textSize="@dimen/size_14"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/contactBtnSideMenu"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        android:layout_marginVertical="@dimen/margin_8"
+        android:background="@drawable/bg_logout_btn"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

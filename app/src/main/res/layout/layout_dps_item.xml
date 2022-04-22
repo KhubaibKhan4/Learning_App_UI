@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/margin_12"
+    android:layout_marginTop="@dimen/margin_4"
+    app:cardCornerRadius="@dimen/margin_4"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="@dimen/margin_4"
+    android:layout_marginRight="@dimen/margin_12"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margin_12"
+        android:paddingVertical="@dimen/margin_16"
+        >
+    <TextView
+        android:id="@+id/textDps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_12"
+        android:gravity=""
+        android:text="DPS No 367"
+        android:textColor="#55000000" />
+
+        <TextView
+            android:id="@+id/textAnatomy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textDps"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/margin_4"
+            android:paddingRight="@dimen/margin_12"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:text="Anatomy of Flowering plants"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/dpsIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_2"
+            android:layout_marginRight="@dimen/margin_12"
+            android:layout_toRightOf="@+id/textAnatomy"
+            android:src="@drawable/dps_biology" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

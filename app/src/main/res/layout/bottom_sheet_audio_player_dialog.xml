@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#DDDDDD"
+    android:paddingVertical="@dimen/margin_16"
+    >
+
+    <TextView
+        android:id="@+id/durationCovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_2"
+        android:text="00:1:22"
+        android:textSize="@dimen/size_12" />
+
+    <SeekBar
+        android:id="@+id/seekBarAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/durationTotal"
+        android:layout_toRightOf="@id/durationCovered"
+        android:thumbTint="@android:color/darker_gray"
+        android:layout_marginTop="@dimen/margin_2"
+        android:tickMarkTint="@android:color/darker_gray" />
+
+
+    <TextView
+        android:id="@+id/durationTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_2"
+        android:text="03:1:22"
+        android:textSize="@dimen/size_12" />
+
+
+    <TextView
+        android:id="@+id/audioTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/durationCovered"
+        android:layout_alignParentLeft="true"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_toLeftOf="@+id/iconPause"
+        android:text="Environmental issues chapter"
+        android:textColor="@color/text_color_create_account" />
+
+
+    <ImageView
+        android:id="@+id/iconPause"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/durationTotal"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_toLeftOf="@+id/durationTotal"
+        android:background="@drawable/bg_note_circle"
+        android:backgroundTint="#BBBBBB"
+        android:padding="@dimen/margin_6"
+        android:src="@drawable/ic_baseline_pause_24" />
+
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/backward"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        android:layout_below="@+id/audioTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_24"
+        />
+
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/forward"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        android:layout_below="@+id/audioTitle"
+        android:layout_toRightOf="@id/backward"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_24"
+        />
+
+
+    <TextView
+        android:id="@+id/audioSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_below="@+id/forward"
+        android:text="Audio Speed :"
+        android:textColor="@color/black"
+        android:paddingVertical="@dimen/margin_6"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_below="@id/forward"
+        android:layout_toRightOf="@+id/audioSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/speed05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lectureDuration"
+            android:layout_marginHorizontal="@dimen/size_12"
+            android:layout_toRightOf="@+id/lectureThumbnail"
+            android:text="0.5X"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/margin_4"
+            android:paddingVertical="@dimen/margin_6"
+            />
+
+
+        <TextView
+            android:id="@+id/speed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lectureDuration"
+            android:layout_marginHorizontal="@dimen/size_12"
+            android:layout_toRightOf="@+id/lectureThumbnail"
+            android:text="1X"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/margin_4"
+            android:paddingVertical="@dimen/margin_6"
+            />
+
+
+        <TextView
+            android:id="@+id/speed15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lectureDuration"
+            android:layout_marginHorizontal="@dimen/size_12"
+            android:layout_toRightOf="@+id/lectureThumbnail"
+            android:text="1.5X"
+            android:textColor="@color/black"
+            android:backgroundTint="#BBBBBB"
+            android:background="@drawable/bg_btn_google_fb"
+            android:paddingHorizontal="@dimen/margin_4"
+            android:paddingVertical="@dimen/margin_6"
+            />
+
+
+        <TextView
+            android:id="@+id/speed2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lectureDuration"
+            android:layout_marginHorizontal="@dimen/size_12"
+            android:layout_toRightOf="@+id/lectureThumbnail"
+            android:text="2X"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/margin_4"
+            android:paddingVertical="@dimen/margin_6"
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_dialog"
+    android:layout_marginHorizontal="@dimen/size_16"
+    android:layout_marginVertical="@dimen/margin_6"
+    android:elevation="@dimen/margin_4"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingVertical="@dimen/margin_8">
+
+            <ImageView
+                android:id="@+id/iconFilter"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_filter_alt_24" />
+
+            <TextView
+                android:id="@+id/textFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_6"
+                android:layout_toRightOf="@+id/iconFilter"
+                android:text="Filter"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size18" />
+
+            <View
+                android:id="@+id/indicatorFilter"
+                android:layout_width="70dp"
+                android:layout_height="2dp"
+                android:layout_below="@id/textFilter"
+                android:layout_marginTop="@dimen/margin_18"
+                android:background="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sortLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingVertical="@dimen/margin_8">
+
+            <ImageView
+                android:id="@+id/iconSort"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_filter_alt_24" />
+
+            <TextView
+                android:id="@+id/textSort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_6"
+                android:layout_toRightOf="@+id/iconSort"
+                android:text="Sort"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size18" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/indicatorSort"
+                android:layout_width="70dp"
+                android:layout_height="2dp"
+                android:layout_below="@id/textSort"
+                android:layout_marginTop="@dimen/margin_18"
+                android:background="@color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_18"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_6">
+
+
+        <TextView
+            android:id="@+id/textStandard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_6"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/margin_6"
+            android:text="Standard"
+            android:textColor="@color/text_color_create_account" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/text11Standard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="11th Standard"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text12Standard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="12th Standard"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/margin_6"
+            android:text="Progress"
+            android:textColor="@color/text_color_create_account" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/inProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="In Progress"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/completed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="Completed"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/onHold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="On Hold"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/upComing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="UpComing"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layoutSort"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/nameAsc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="Name Asc A-Z"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/nameDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="Name Desc Z-A"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/mostRecent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="Most Recent"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/oldestFirst"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="Oldest First"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnResetFilterSort"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        android:layout_marginVertical="@dimen/margin_16"
+        android:background="@drawable/bg_logout_btn"
+        android:paddingHorizontal="@dimen/size_16"
+        android:text="Reset Filter &amp; Sort"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="@dimen/margin_6"
+    android:layout_marginBottom="@dimen/margin_4"
+    android:background="@drawable/bg_btn_google_fb">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/lectureThumbnail"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/margin_6"
+        android:layout_marginTop="@dimen/margin_10"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"
+        app:riv_corner_radius="@dimen/margin_6" />
+
+    <TextView
+        android:id="@+id/lectureTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_toRightOf="@+id/lectureThumbnail"
+        android:text="Lecture 7"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:id="@+id/lectureDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lectureTitle"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_toRightOf="@+id/lectureThumbnail"
+        android:text="1:34:3"
+        android:textSize="@dimen/size_12"
+        android:drawableLeft="@drawable/ic_baseline_play_arrow_24"
+        />
+
+    <TextView
+        android:id="@+id/dateDps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lectureDuration"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_toRightOf="@+id/lectureThumbnail"
+        android:text="2/22/2022"
+        android:textSize="@dimen/size_12" />
+
+    <TextView
+        android:id="@+id/textUploadedLecture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lectureDuration"
+        android:layout_marginHorizontal="@dimen/margin_2"
+        android:layout_toRightOf="@+id/dateDps"
+        android:background="@drawable/bg_test_result_layout"
+        android:paddingHorizontal="@dimen/margin_6"
+        android:paddingVertical="@dimen/margin_4"
+        android:text="Uploaded today"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_12" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/textUploadedLecture"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/text_color" />
+
+</RelativeLayout>

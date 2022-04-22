@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CommentActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:padding="@dimen/margin_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#19204D"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comments"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_baseline_filter_alt_24"
+            android:layout_toLeftOf="@+id/closeIcon"
+            android:layout_marginHorizontal="@dimen/margin_6"
+            android:id="@+id/filterIcon"
+            app:tint="@color/white" />
+
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="@dimen/margin_6"
+            android:id="@+id/closeIcon"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvComments"
+        android:layout_below="@id/layoutTop"
+        android:layout_above="@id/addCommentLayout"
+        android:layout_marginVertical="@dimen/margin_10"
+        tools:listitem="@layout/comment_section_layout"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/addCommentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_2"
+        android:paddingVertical="@dimen/margin_2"
+        >
+
+        <EditText
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:id="@+id/edComment"
+            android:hint="Add your comment"
+            android:background="@drawable/bg_btn_google_fb"
+            android:padding="@dimen/margin_6"
+            />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_send_24"
+            android:background="@drawable/bg_register_btn"
+            app:tint="@color/white" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

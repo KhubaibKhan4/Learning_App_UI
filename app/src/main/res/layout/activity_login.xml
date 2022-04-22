@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_6"
+    tools:context=".activity.LoginActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_24"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_48"
+            android:elevation="@dimen/margin_2"
+            app:cardCornerRadius="@dimen/margin_6"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_8"
+                android:paddingHorizontal="@dimen/margin_16"
+                >
+
+
+                <TextView
+                    android:id="@+id/textRegisterForFree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_12"
+                    android:textColor="@color/text_color"
+                    android:gravity="center_horizontal"
+                    android:text="@string/log_in_with" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin_6"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutGmailLogin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="@dimen/margin_4"
+                        android:layout_marginLeft="@dimen/margin_16"
+                        android:layout_marginRight="@dimen/margin_12"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_google_fb"
+                        android:elevation="@dimen/margin_2"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_8"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/goolge_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginHorizontal="@dimen/margin_6"
+                            android:gravity="center_horizontal"
+                            android:text="@string/gmail"
+                            android:textColor="#9d9d9d" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutFacebookLogin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="@dimen/margin_4"
+                        android:layout_marginLeft="@dimen/margin_12"
+                        android:layout_marginRight="@dimen/margin_16"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_google_fb"
+                        android:elevation="@dimen/margin_2"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_8">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/fb_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginHorizontal="@dimen/margin_6"
+                            android:gravity="center_horizontal"
+                            android:text="@string/facebook"
+                            android:textColor="#9d9d9d" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginBottom="@dimen/margin_16"
+                    android:background="#22000000" />
+
+
+                <TextView
+                    android:id="@+id/textOrLoginWith"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginBottom="@dimen/margin_6"
+                    android:gravity="center_horizontal"
+                    android:textColor="#c7c7c7"
+                    android:text="@string/or_log_in_with_credentials" />
+
+
+
+                <EditText
+                    android:id="@+id/userEmailLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_18"
+                    android:background="@drawable/bg_btn_google_fb"
+                    android:drawableLeft="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="@dimen/margin_12"
+                    android:elevation="@dimen/margin_2"
+                    android:hint="Email/ Contact No"
+                    android:textSize="@dimen/size_14"
+                    android:textColor="#797979"
+                    android:textColorHint="#797979"
+                    android:paddingHorizontal="@dimen/margin_6"
+                    android:paddingVertical="@dimen/margin_8" />
+
+
+                <EditText
+                    android:id="@+id/userPasswordLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/bg_btn_google_fb"
+                    android:drawableLeft="@drawable/ic_baseline_lock_open_24"
+                    android:drawablePadding="@dimen/margin_12"
+                    android:elevation="@dimen/margin_2"
+                    android:hint="@string/password"
+                    android:textSize="@dimen/size_14"
+                    android:textColor="#797979"
+                    android:textColorHint="#797979"
+                    android:paddingHorizontal="@dimen/margin_6"
+                    android:paddingVertical="@dimen/margin_8" />
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginBottom="@dimen/margin_12"
+                    android:background="@drawable/bg_register_btn"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_8"
+                    android:text="Log In"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:onClick="forgotPassword"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/textForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardRegister"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_6"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="@dimen/margin_6"
+            android:text="Forgot Password" />
+
+
+        <TextView
+            android:id="@+id/textCreateNewAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardRegister"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_16"
+            android:paddingHorizontal="@dimen/margin_6"
+            android:text="Create new account"
+            android:textColor="@color/text_color_create_account" />
+
+
+    </RelativeLayout>
+</ScrollView>

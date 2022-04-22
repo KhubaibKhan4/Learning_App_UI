@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/size_16"
+    android:layout_marginVertical="@dimen/margin_6"
+    android:background="@drawable/bg_bottom_dialog"
+    android:elevation="@dimen/margin_4"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/sortLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingVertical="@dimen/margin_8">
+
+        <ImageView
+            android:id="@+id/iconSort"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_filter_alt_24" />
+
+        <TextView
+            android:id="@+id/textSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_6"
+            android:layout_toRightOf="@+id/iconSort"
+            android:text="Sort"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size18" />
+
+        <View
+            android:id="@+id/indicatorSort"
+            android:layout_width="70dp"
+            android:layout_height="2dp"
+            android:layout_below="@id/textSort"
+            android:layout_marginTop="@dimen/margin_12"
+            android:background="@color/black" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginBottom="@dimen/margin_16"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/nameAsc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="Name Asc A-Z"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nameDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="Name Desc Z-A"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/mostRecent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="Most Recent"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/oldestFirst"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/bg_test_result_layout"
+                android:backgroundTint="@color/tab_bg_color"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:paddingVertical="@dimen/margin_8"
+                android:text="Oldest First"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnResetFilterSort"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        android:layout_marginVertical="@dimen/margin_16"
+        android:background="@drawable/bg_logout_btn"
+        android:paddingHorizontal="@dimen/size_16"
+        android:text="Reset Filter &amp; Sort"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

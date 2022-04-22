@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.StartQuizActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutHeader"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/header_bg">
+
+
+                <TextView
+                    android:id="@+id/textTopicQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="@dimen/margin_12"
+                    android:layout_marginLeft="@dimen/margin_12"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_toLeftOf="@id/moreIcon"
+                    android:text="DPS -273 Semi Conductor Electronics, materials  deveice and simple circuits"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_16" />
+
+                <ImageView
+                    android:onClick="questionClick"
+                    android:id="@+id/moreIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="@dimen/margin_12"
+                    android:layout_marginTop="@dimen/size_16"
+                    android:src="@drawable/ic_baseline_apps_24" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textTopicQuiz"
+                    android:layout_marginHorizontal="@dimen/margin_12"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:text="Time- 00:07"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/margin_10"
+                android:layout_marginTop="-50dp"
+                android:layout_marginBottom="@dimen/margin_2"
+                android:padding="@dimen/margin_16"
+                app:cardCornerRadius="@dimen/margin_6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/margin_12">
+
+                        <TextView
+                            android:id="@+id/questionNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin_12"
+                            android:text="Q1."
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/size_16" />
+
+                        <TextView
+                            android:id="@+id/askDoubtText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginHorizontal="@dimen/margin_12"
+                            android:drawableLeft="@drawable/ic_baseline_help_24"
+                            android:drawablePadding="@dimen/margin_4"
+                            android:drawableTint="@color/black"
+                            android:text="Ask a Doubt"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/size_16" />
+
+                        <TextView
+                            android:onClick="clickOnReport"
+                            android:id="@+id/reportText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_12"
+                            android:layout_toLeftOf="@+id/askDoubtText"
+                            android:drawableLeft="@drawable/ic_baseline_help_24"
+                            android:drawablePadding="@dimen/margin_4"
+                            android:drawableTint="@color/black"
+                            android:text="Report"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/size_16" />
+
+
+                        <TextView
+                            android:id="@+id/textQuestion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/reportText"
+                            android:layout_marginHorizontal="@dimen/margin_12"
+                            android:layout_marginTop="@dimen/margin_18"
+                            android:text="This is some question text"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/margin_16" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textQuestion"
+                            android:layout_marginHorizontal="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_16"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutChoiceA"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_12">
+
+                                <TextView
+                                    android:id="@+id/choiceA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="A"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/choiceAValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/margin_12"
+                                    android:text="First"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layoutChoiceB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_12">
+
+                                <TextView
+                                    android:id="@+id/choiceB"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="B"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/choiceBValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/margin_12"
+                                    android:text="Second"
+                                    android:textColor="@color/black"
+
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layoutChoiceC"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_12">
+
+                                <TextView
+                                    android:id="@+id/choiceC"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="C"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/choiceCValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/margin_12"
+                                    android:text="Third"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layoutChoiceD"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_12">
+
+                                <TextView
+                                    android:id="@+id/choiceD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="D"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/choiceDValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/margin_12"
+                                    android:text="Fourth"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textCorrectAnswer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/margin_12"
+                                android:layout_marginTop="@dimen/margin_20"
+                                android:text="INCORRECT: The correct answer is a"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/correctAnswer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/margin_12"
+                                android:layout_marginTop="@dimen/margin_8"
+                                android:text="This is correct answer"
+                                android:textColor="@color/black" />
+
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnCheckCompeleteVideo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/margin_12"
+                                android:layout_marginTop="@dimen/margin_20"
+                                android:background="@drawable/bg_start_test"
+                                android:text="Click here to watch explanation video"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_18"
+                                android:background="#E9ECEF"
+                                android:paddingHorizontal="@dimen/margin_10"
+                                android:paddingVertical="@dimen/margin_16">
+
+                                <ImageView
+                                    android:id="@+id/playBtn"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="@drawable/bg_note_circle"
+                                    android:backgroundTint="@color/white"
+                                    android:padding="@dimen/margin_6"
+                                    android:src="@drawable/ic_baseline_play_arrow_24"
+                                    app:tint="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/durationCovered"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/seekBarAudio"
+                                    android:layout_marginHorizontal="@dimen/margin_16"
+                                    android:layout_marginTop="@dimen/margin_2"
+                                    android:layout_toRightOf="@+id/playBtn"
+                                    android:text="00:1:22"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/size_12" />
+
+                                <SeekBar
+                                    android:id="@+id/seekBarAudio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/margin_12"
+                                    android:layout_marginTop="@dimen/margin_2"
+                                    android:layout_toRightOf="@id/playBtn"
+                                    android:thumbTint="@color/black"
+                                    android:tickMarkTint="@color/black" />
+
+
+                                <TextView
+                                    android:id="@+id/durationTotal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/seekBarAudio"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginHorizontal="@dimen/margin_16"
+                                    android:layout_marginTop="@dimen/margin_2"
+                                    android:text="03:1:22"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/size_12" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/previousQuestion"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Previous"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="@dimen/size_14"
+                                android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"
+                                android:paddingHorizontal="@dimen/margin_2"
+                                android:paddingVertical="@dimen/margin_6"
+                                />
+
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/bookmark"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="2"
+                                android:text="Bookmark Question"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                android:layout_marginHorizontal="@dimen/margin_6"
+                                android:textAllCaps="false"
+                                android:background="#333333"
+                                android:drawableLeft="@drawable/ic_baseline_bookmark_border_24"
+                                android:padding="@dimen/margin_6"
+                                />
+
+                            <TextView
+                                android:id="@+id/nextQuestion"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Next"
+                                android:layout_gravity="center"
+                                android:gravity="right"
+                                android:textSize="@dimen/size_14"
+                                android:drawablePadding="@dimen/margin_6"
+                                android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:textColor="@color/black"
+                                android:paddingHorizontal="@dimen/margin_2"
+                                android:paddingVertical="@dimen/margin_6"
+
+                                />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

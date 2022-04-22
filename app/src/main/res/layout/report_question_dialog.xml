@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_start_test"
+    android:layout_margin="@dimen/margin_24"
+    android:backgroundTint="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/questionList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:padding="@dimen/margin_8"
+        android:text="Report Question"
+        android:textSize="@dimen/size18" />
+
+    <ImageView
+        android:id="@+id/closeDialogIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_baseline_close_24"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/margin_18"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/closeDialogIcon"
+        android:layout_marginVertical="@dimen/margin_20"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error in question"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error in options"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incorrect Answer"
+            />
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error in Explanation"
+            />
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error in Translation"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            />
+
+
+
+    </RadioGroup>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_register_btn"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="@dimen/margin_20"
+        android:layout_margin="@dimen/margin_16"
+        />
+
+
+</RelativeLayout>

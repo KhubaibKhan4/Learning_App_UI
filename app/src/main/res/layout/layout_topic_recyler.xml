@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="@dimen/margin_6"
+    android:layout_marginBottom="@dimen/margin_4"
+    android:background="@drawable/bg_btn_google_fb">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageViewTopic"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_6"
+        android:layout_marginTop="@dimen/margin_4"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"
+        app:riv_corner_radius="@dimen/margin_6" />
+
+    <TextView
+        android:id="@+id/topicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_toRightOf="@+id/imageViewTopic"
+        android:text="Biology Basic"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:id="@+id/xiAndXii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topicTitle"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_toRightOf="@+id/imageViewTopic"
+        android:background="@drawable/bg_register_btn"
+        android:layout_marginTop="@dimen/margin_6"
+        android:text="XI and XII"
+        android:textColor="@color/white"
+        android:paddingVertical="@dimen/margin_2"
+        android:paddingHorizontal="@dimen/margin_6"/>
+
+
+
+    <TextView
+        android:id="@+id/textCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topicTitle"
+        android:layout_marginHorizontal="@dimen/margin_2"
+        android:layout_toRightOf="@+id/xiAndXii"
+        android:background="@drawable/bg_test_result_layout"
+        android:layout_marginTop="@dimen/margin_6"
+        android:text="Completed"
+        android:textColor="@color/white"
+        android:paddingVertical="@dimen/margin_2"
+        android:paddingHorizontal="@dimen/margin_6"/>
+
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_color"
+        android:layout_below="@id/imageViewTopic"
+        android:layout_marginTop="@dimen/margin_10"
+        />
+
+
+
+
+</RelativeLayout>

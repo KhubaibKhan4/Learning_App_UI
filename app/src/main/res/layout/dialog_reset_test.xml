@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_marginTop="@dimen/margin_32"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/ic_baseline_help_24"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:text="Request Test Reset?"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textSize="@dimen/size_16" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:text="Once a request is raised,  your test will be reset by our support as soon as possible. Are you sure you want to request for a reset test?"
+        android:layout_gravity="center"
+        android:gravity="center"
+      />
+
+
+    <LinearLayout
+        android:layout_marginVertical="@dimen/margin_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnResetTestDialog"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_8"
+            android:layout_marginVertical="@dimen/margin_12"
+            android:layout_weight="1"
+            android:background="@drawable/bg_register_btn"
+            android:paddingHorizontal="@dimen/margin_16"
+            android:text="Request Reset"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_8"
+            android:layout_marginVertical="@dimen/margin_12"
+            android:layout_weight="1"
+            android:background="@drawable/bg_logout_btn"
+            android:paddingHorizontal="@dimen/margin_16"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
